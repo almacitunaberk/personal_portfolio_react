@@ -1,0 +1,117 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+  display: grid;
+  place-items: center;
+}
+
+.about__image-me {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition);
+}
+
+.about__image-me:hover {
+  transform: rotate(0deg);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about__content__cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__content__cards-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+
+.about__content__cards-card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.about__icon {
+  position: relative;
+  top: 0.5rem;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about__content__cards-card h5 {
+  font-size: 0.96rem;
+}
+
+.about__content p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about__content p {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .about__image {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about__image {
+    width: 65%;
+    margin: 0 auto 3rem;
+  }
+
+  .about__content__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__content__cards-card:first-child {
+    grid-column: 1 / span 2;
+  }
+
+  .about__content {
+    text-align: center;
+  }
+
+  .about__content p {
+    margin: 1.5rem 0;
+  }
+
+  .about__content a {
+    margin: auto;
+  }
+}
