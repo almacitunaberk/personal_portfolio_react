@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
-import { FaHandshake } from 'react-icons/fa';
+import { BsFolderFill } from 'react-icons/bs';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 import './Nav.css';
 
@@ -25,18 +25,18 @@ const Nav = () => {
         <AiOutlineUser />
       </a>
       <a
-        onClick={() => setActiveClass('experiences')}
-        className={`nav__container__link ${activeClass === 'experiences' && 'active'}`}
-        href="#experiences"
+        onClick={() => setActiveClass('experience')}
+        className={`nav__container__link ${activeClass === 'experience' && 'active'}`}
+        href="#experience"
       >
         <BiBook />
       </a>
       <a
-        onClick={() => setActiveClass('services')}
-        className={`nav__container__link ${activeClass === 'home' && 'services'}`}
-        href="#services"
+        onClick={() => setActiveClass('portfolio')}
+        className={`nav__container__link ${activeClass === 'portfolio' && 'active'}`}
+        href="#portfolio"
       >
-        <FaHandshake />
+        <BsFolderFill />
       </a>
       <a
         onClick={() => setActiveClass('contact')}

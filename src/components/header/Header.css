@@ -3,6 +3,7 @@ header {
   padding-top: 7rem;
   overflow: hidden;
 }
+
 .header__container {
   text-align: center;
   height: 100%;
@@ -65,13 +66,96 @@ header {
   }
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  header {
+    height: 100vh;
+  }
+
+  .image__container {
+    padding-top: 0rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header {
     height: 100vh;
+    padding-top: 2rem;
+  }
+
+  .image__container {
+    top: -2rem;
+    z-index: -1;
+    padding-top: 7rem;
+  }
+
+  .cta {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    position: relative;
+    top: 16rem;
+  }
+
+  .header__container .text-light {
+    visibility: hidden;
   }
 
   .header__socials,
   .scroll__down {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  header {
+    padding-top: 1rem;
+    overflow: visible;
+  }
+
+  .image__container {
+    left: calc(50% - 11rem);
+    top: -2rem;
+    z-index: -1;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding-top: 2rem;
+  }
+
+  .header__container > h1 {
+    margin-top: 1rem;
+  }
+
+  .cta {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    overflow: visible;
+    height: 100vh;
+  }
+
+  .header__container > h1 {
+    margin-top: 0;
+  }
+
+  .image__container {
+    width: 18rem;
+    height: 100%;
+    left: calc(50% - 9rem);
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  header {
+    height: 80vh;
+  }
+  .image__container {
+    height: 30rem;
+  }
+  .cta {
+    margin-top: 6rem;
   }
 }

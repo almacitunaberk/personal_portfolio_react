@@ -1,0 +1,41 @@
+.container.footer__container {
+  width: 100%;
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.nav__links__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__links__container a {
+  color: var(--color-bg);
+}
+
+.nav__links__container a:hover {
+  color: var(--color-light);
+}
+
+.social__links__container {
+  display: flex;
+  gap: 2rem;
+}
+
+.social__link {
+  color: black;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.social__link:hover {
+  transform: scale(1.2);
+  color: var(--color-light);
+}

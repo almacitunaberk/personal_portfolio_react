@@ -26,7 +26,7 @@ const About = () => {
 
             <div className="about__content__cards-card">
               <MdOutlinePeopleAlt className="about__icon" />
-              <h5>Experience</h5>
+              <h5>Industry</h5>
               <small className="text-light">2+ Years Experience</small>
             </div>
 
